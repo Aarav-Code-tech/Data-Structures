@@ -1,0 +1,17 @@
+a=[99,98,97,67,41,41,67]
+b=[]
+for i in a:
+    if i not in b:
+        b.append(i)
+    else:
+        continue
+print(a,b)
+ 
+"""Or(IF you need to do it the better way)"""
+
+b=set(a)
+print(b)
+b=list(b)
+print(b)
+
+

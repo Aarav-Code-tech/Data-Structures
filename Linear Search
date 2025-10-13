@@ -1,0 +1,18 @@
+def a(arr,n,x):
+      for i in range(0,n):
+          if arr[i]==x:
+              return i+1
+      return -1
+
+arr=[10,20,800,57,92]
+print(arr)
+x=int(input("Enter an element to search it position: "))
+n=len(arr)
+
+b=a(arr,n,x)
+if b==-1:
+    print("Enter an element from the array or else GET OUT")
+    
+else:
+    print(f"Element found at {b}")
+

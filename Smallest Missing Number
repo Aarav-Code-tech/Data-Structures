@@ -1,0 +1,11 @@
+from itertools import count
+def a(arr:list)->int:
+    ab=set(arr)
+    for i in count(1):
+        if i not in ab:
+            return i
+arr=[1,4,5,9]
+print(a(arr))
+
+            
+        

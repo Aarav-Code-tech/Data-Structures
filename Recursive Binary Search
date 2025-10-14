@@ -1,0 +1,18 @@
+def b(arr,x,l,r):
+    if r>=l:
+        mid=l+(r-l)//2
+        if arr[mid]==x:
+            return mid
+        elif arr[mid]<x:
+            return b(arr,x,mid+1,r)
+        elif arr[mid]>x:
+            return b(arr,x,l,mid-1)
+    return -1
+arr=[17,19,23,42,94]
+print(arr)
+x=int(input("Enter a number: "))
+result=b(arr,x,0,len(arr)-1)
+if result !=-1:
+    print(f"Element is found at {result+1} position")
+else:
+    print("Element not found")

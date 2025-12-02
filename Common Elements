@@ -1,0 +1,17 @@
+a1=[2,4,5,7]
+a2=[3,4,6,7]
+b=len(a1)
+c=len(a2)
+i=0
+j=0
+while i<b and j<c:
+    if a1[i]<a2[j]:
+        i+=1
+    elif a1[i]>a2[j]:
+        j+=1
+    else:
+        print(a2[j])
+        j+=1
+        i+=1
+        
+        

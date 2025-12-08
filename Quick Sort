@@ -1,0 +1,11 @@
+def a(arr):
+    if len(arr)<=1:
+        return arr
+    pivot=arr[len(arr)//2]
+    left=[x for x in arr if x<pivot]
+    mid=[x for x in arr if x==pivot]
+    right=[x for x in arr if x>pivot]
+    return a(left)+mid+a(right)
+arr=[2,1,4,6,9]
+print("Sorted Array:")
+print(a(arr))

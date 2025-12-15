@@ -1,0 +1,15 @@
+def a(arr,n):
+    count=0
+    for i in range(0,n):
+        if arr[i]==0:
+            count+=1
+    for i in range(0,count):
+        arr[i]=0
+    for i in range(count,n):
+        arr[i]=1
+arr=[1,0,1,1,0,1]
+l=len(arr)
+a(arr,l)
+print(f"Sorted Array:",end='')
+for i in range(0,l):
+    print(arr[i],end='')

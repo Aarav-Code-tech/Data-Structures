@@ -1,0 +1,18 @@
+def rotate1(arr,n,arr_s):
+    for i in range(n):
+        rotate2(arr,arr_s)
+def rotate2(arr,arr_s):
+    temp=arr[arr_s-1]
+    for i in range(arr_s-1,0,-1):
+        arr[i]=arr[i-1]
+    arr[0]=temp
+def a(arr,arr_s):
+    for i in range(arr_s):
+        print("% d"% arr[i],end=" ")
+    print("\n")
+arr=[7,1,90,65,6,7,67]
+b=len(arr)
+a(arr,b)
+n=int(input("No. of times array has to be rotated:"))
+rotate1(arr,n,b)
+a(arr,b)

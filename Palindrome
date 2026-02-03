@@ -1,0 +1,10 @@
+d="racecar"
+d=d.lower()
+c=d
+d=list(d)
+d.reverse()
+b="".join(d)
+if c==b:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")

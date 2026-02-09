@@ -1,0 +1,20 @@
+def freq(a):
+    a=a.lower()
+    b={}
+    for i in range(len(a)):
+        if a[i] in b.keys():
+            b[a[i]]+=1
+        else:
+            b[a[i]]=1
+    return b
+def abc(s1,s2):
+    d_s1=freq(s1)
+    d_s2=freq(s2)
+    if d_s1==d_s2:
+        return True
+    else:
+        return False
+str1="Sapiens"
+str2="iensasp"
+print(abc(str1,str2))
+

@@ -1,0 +1,8 @@
+def a(s):
+    d = {}
+    for i in s:
+        if i not in d.keys():
+            d[i]=ord(i)
+    return d
+s='d'
+print(a(s))

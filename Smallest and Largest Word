@@ -1,0 +1,19 @@
+def a(str):
+    word=""
+    all=[]
+    str=str+" "
+    for i in range(0,len(str)):
+        if str[i]!=" ":
+            word=word+str[i]
+        else:
+            all.append(word)
+            word=""
+    small=large=all[0]
+    for k in range(0,len(all)):
+        if len(small)>len(all[k]):
+            small=all[k]
+        if len(large)<len(all[k]):
+            large=all[k]
+    print(small,",",large)
+str="He is at home"
+a(str)

@@ -32,18 +32,16 @@ def print_k_distance_node(root, target, k):
 		else:
 			print_k_distance_node_down(root.left, k - dr - 2)
 		return 1 + dr
-	return -1
-def main():
-	root = Node(20)
-	root.left = Node(8)
-	root.right = Node(22)
-	root.left.left = Node(4)
-	root.left.right = Node(12)
-	root.left.right.left = Node(10)
-	root.left.right.right = Node(14)
-	target = root.left.right  # Node with data 12
-	k = 2
-	print_k_distance_node(root, target, k)
-	print()  # For a newline after the output
-if __name__ == "__main__":
-	main()
+return -1
+root = Node(20)
+root.left = Node(8)
+root.right = Node(22)
+root.left.left = Node(4)
+root.left.right = Node(12)
+root.left.right.left = Node(10)
+root.left.right.right = Node(14)
+target = root.left.right  # Node with data 12
+k = 2
+print_k_distance_node(root, target, k)
+print()  # For a newline after the output 
+main()

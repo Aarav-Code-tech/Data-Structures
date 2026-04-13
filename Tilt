@@ -1,0 +1,24 @@
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.left = None
+		self.right = None
+def trav(r,t):
+	if not r:
+		return 0
+	left=trav(r.left,t)
+	right=trav(r.right,t)
+	t[0]+=abs(left-right)
+	return left+right+r.data
+def tilt(r):
+	t=[0]
+	trav(r,t)
+	return t
+r=None
+r=Node(1)
+r.left=Node(2)
+r.right=Node(3)
+r.left.left=Node(4)
+r.left.right=Node(5)
+r.right.right=Node(6)
+print(tilt(r))

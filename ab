@@ -1,0 +1,20 @@
+import heapq as h
+def sort(a):
+    b=[]
+    for n in a:
+        h.heappush(b,n)
+    r=[]
+    while b:
+        t=h.heappop(b)
+        r.insert(0,t)
+    return r
+a=[4,6,3,2,9]
+r=sort(a)
+for n in r:
+    print(n,end=' ')
+print()
+
+    
+    
+
+            

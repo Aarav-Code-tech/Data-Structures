@@ -1,0 +1,27 @@
+class PriorityQueue:
+    def __init__(self):
+        self.queue = []
+    def enqueue(self, value, priority):
+        self.queue.append((value, priority))
+    def dequeue(self):
+        if not self.queue:
+            return None
+        highest = self.queue[0]
+        for item in self.queue:
+            if item[1] > highest[1]:
+                highest = item
+            elif item[1] == highest[1] and item[0] > highest[0]:
+                highest = item
+        self.queue.remove(highest)
+        return highest[0]
+pq = PriorityQueue()
+pq.enqueue(10, 2)
+pq.enqueue(14, 4)
+pq.enqueue(16, 4)
+pq.enqueue(12, 3)
+print(pq.dequeue())
+print(pq.dequeue())
+print(pq.dequeue())
+print(pq.dequeue())
+
+
